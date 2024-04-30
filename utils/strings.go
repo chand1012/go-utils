@@ -2,9 +2,7 @@ package utils
 
 import "regexp"
 
-// uses a regex to remove any quotes from a string
-// and returns the modified string. Does nothing if the
-// string doesn't contain any quotes.
+// RemoveQuotes removes any quotes from a string using regex.
 func RemoveQuotes(s string) string {
 	// regex to match any quotes
 	regex := `["']`

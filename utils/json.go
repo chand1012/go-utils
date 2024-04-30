@@ -4,6 +4,7 @@ import (
 	"errors"
 )
 
+// GetJSONKeys returns the keys of a JSON object as a slice of strings.
 func GetJSONKeys(j any) ([]string, error) {
 	var keys []string
 	switch t := j.(type) {

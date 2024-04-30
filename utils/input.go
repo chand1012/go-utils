@@ -7,6 +7,7 @@ import (
 	"strings"
 )
 
+// Input prompts the user for input and returns the entered text.
 func Input(prompt string) (string, error) {
 	fmt.Print(prompt)
 
@@ -19,6 +20,7 @@ func Input(prompt string) (string, error) {
 	return strings.TrimSpace(input), nil
 }
 
+// InputWithColor prompts the user for input and returns the entered text. The prompt is displayed in the specified CSS color code.
 func InputWithColor(prompt, cssColorCode string) (string, error) {
 	PrintColoredText(prompt, cssColorCode)
 

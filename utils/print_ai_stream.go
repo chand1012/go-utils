@@ -8,6 +8,7 @@ import (
 	"github.com/sashabaranov/go-openai"
 )
 
+// PrintChatCompletionStream prints the chat completion stream to the console
 func PrintChatCompletionStream(stream *openai.ChatCompletionStream) (string, error) {
 	var completeStream string
 

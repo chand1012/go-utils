@@ -1,6 +1,6 @@
 package utils
 
-// checks if a string is in a slice of strings
+// StringInSlice checks if a string is in a slice of strings
 func StringInSlice(s string, slice []string) bool {
 	for _, v := range slice {
 		if s == v {
@@ -10,6 +10,7 @@ func StringInSlice(s string, slice []string) bool {
 	return false
 }
 
+// DedupeStringSlice removes duplicate strings from a slice of strings.
 func DedupeStringSlice(s []string) []string {
 	keys := make(map[string]bool)
 	var list []string
