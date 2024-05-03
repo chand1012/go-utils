@@ -1,5 +1,7 @@
 package utils
 
+import "strings"
+
 // StringInSlice checks if a string is in a slice of strings
 func StringInSlice(s string, slice []string) bool {
 	for _, v := range slice {
@@ -35,4 +37,24 @@ func ReverseSlice[T any](s []T) {
 		left++
 		right--
 	}
+}
+
+// EndsWithAny takes a string and a slice of suffixes and returns true if the string ends with any of the suffixes.
+func EndsWithAny(s string, suffixes []string) bool {
+	for _, suffix := range suffixes {
+		if strings.HasSuffix(s, suffix) {
+			return true
+		}
+	}
+	return false
+}
+
+// StartsWithAny takes a string and a slice of prefixes and returns true if the string starts with any of the prefixes.
+func StartsWithAny(s string, prefixes []string) bool {
+	for _, prefix := range prefixes {
+		if strings.HasPrefix(s, prefix) {
+			return true
+		}
+	}
+	return false
 }
